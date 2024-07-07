@@ -20,7 +20,7 @@ Processor& System::Cpu() { return cpu_; }
 vector<Process>& System::Processes() { 
  	processes_.clear();    
     auto pids = LinuxParser::Pids();
-	int processes = 10;
+	unsigned int processes = 10;
 
     for(unsigned int i = 0; i < pids.size() && i < processes; ++i)
     {
